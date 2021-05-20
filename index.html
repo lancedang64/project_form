@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML Form</title>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <form novalidate>
+        <label for="email">
+          <span>Email: </span>
+          <input type="email" name="email" id="email" required minlength="8" />
+          <span class="error" aria-live="polite"></span>
+        </label>
+        <label for="country">
+          <span>Country: </span>
+          <input
+            type="text"
+            name="country"
+            id="country"
+            required
+            minlength="4"
+            pattern="[a-zA-Z]*"
+          />
+          <span class="error" aria-live="polite"></span>
+        </label>
+        <label for="zip-code">
+          <span>Zip code: </span>
+          <input type="text" name="zip-code" id="zip-code" />
+          <span class="error" aria-live="polite"></span>
+        </label>
+        <label for="password">
+          <span>Password: </span>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            required
+            minlength="4"
+            maxlength="20"
+          />
+          <span class="error" aria-live="polite"></span>
+        </label>
+        <label for="password-confirm">
+          <span>Password Confirmation: </span>
+          <input
+            type="password"
+            name="password-confirm"
+            id="password-confirm"
+          />
+          <span class="error" aria-live="polite"></span>
+        </label>
+        <button class="submit">Submit</button>
+      </form>
+    </div>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
